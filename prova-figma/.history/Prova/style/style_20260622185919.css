@@ -1,0 +1,182 @@
+body{
+    font-family:"Libre Franklin";
+    margin: 0px;
+}
+
+/* HEADER */
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+header nav{
+    display: none;
+}
+
+header button{
+    display: none;
+}
+
+header img {
+    border: solid 1px var(--header-icon-border-color);
+    border-radius: 16px;
+}
+
+header h2 {
+    color: var(--primary-color);
+}
+
+
+/* SECTION HERO */
+.hero{
+    background: linear-gradient(135deg, #3279E2 0%, #CACAEB 100%);
+    margin-bottom: 80px;
+}
+
+.hero-first-article{
+    width: 98%;                     /*OBSERVAÇÃO IMPORTANTE EM QUESTÃO          DO POSICIONAMENTO E FIDELIDADE AO FIGMA*/
+    justify-self: center;           /*O POSICIONAMENTO FOI ALTERADO POIS, EMBORA A TIPOGRAFIA TENHA SIDO COPIADA EXTRITAMENTE SEMLHANTE AO FIGMA OS TAMANHOS E POSICIONAMENTOS DA TELA NA RESOLUÇÃO MÍNIMA INDICADA NÃO DARIAM CERTO*/
+}
+
+.hero-subtitle{
+    color: var(--subtitle);
+}
+
+.hero-title{
+    color: var(--primary-color);
+}
+
+.hero-paragraph{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.hero-button{
+    background-color: rgba(17, 17, 17, 1);
+    color: var(--primary-color);
+    padding: 16px 30px;
+    font-family: Libre Franklin;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 16px;
+}
+
+/* .hero-second-article{
+    width: 405px;
+    height: 80%;
+}
+
+.image{
+    object-fit: cover;
+
+} */
+
+/* SECTION SERVICE */
+.service-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+}
+
+.service-container-line {
+    height: 1px;
+    background-color: var(--normal-line);
+    width: 85vw;
+    justify-self: center;
+    margin-top: 80px;
+    margin-bottom: 95px;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card p {
+    width: 306px;
+}
+
+.bg-icon-fly {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    width: 102px;
+    height: 102px;
+    background-color: var(--bg-icon-fly)
+}
+
+.icon-fly {
+    height: 2rem;
+    width: 3rem;
+}
+
+.bg-icon-backpack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    width: 102px;
+    height: 102px;
+    background-color: var(--bg-icon-backpack)
+}
+
+.icon-backpack {
+    height: 2,5rem;
+    width: 3rem;
+}
+
+.bg-icon-rocket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    width: 102px;
+    height: 102px;
+    background-color: var(--bg-icon-rocket)
+}
+
+.icon-rocket {
+    height: 3rem;
+    width: 3rem;
+}
+
+/* SECTION OUR COMPANY */
+
+.our-company{
+    background-color: rgba(236, 241, 250, 1);
+}
+
+.company-subtitle{
+    color: rgba(50, 121, 226, 1);
+}
+
+.company-paragraph{
+    font-family: Libre Franklin;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0px;
+}
+
+.company-button{
+    background-color: transparent;
+    color: rgba(50, 121, 226, 1);
+    padding: 16px 30px;
+    font-family: Libre Franklin;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid rgba(50, 121, 226, 0.3);
+    border-radius: 16px;
+}

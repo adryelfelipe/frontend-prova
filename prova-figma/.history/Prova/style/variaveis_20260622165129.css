@@ -1,0 +1,9 @@
+.subtitle-base{
+    font-family: Libre Franklin;
+    font-weight: 300;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 32px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}

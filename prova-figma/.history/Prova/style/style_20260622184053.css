@@ -1,0 +1,97 @@
+body{
+    font-family:"Libre Franklin";
+    margin: 0px;
+}
+
+/* HEADER */
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+header nav{
+    display: none;
+}
+
+header button{
+    display: none;
+}
+
+header img {
+    border: solid 1px var(--header-icon-border-color);
+    border-radius: 16px;
+}
+
+header h2 {
+    color: var(--primary-color);
+}
+
+
+/* SECTION HERO */
+.hero{
+    background: linear-gradient(135deg, #3279E2 0%, #CACAEB 100%);
+}
+
+.hero-first-article{
+    width: 98%;                     /*OBSERVAÇÃO IMPORTANTE EM QUESTÃO DE POSICIONAMENTO E FIDELIDADE AO FIGMA*/
+    justify-self: center;           /*O POSICIONAMENTO FOI ALTERADO POIS, EMBORA A TIPOGRAFIA TENHA SIDO COPIADA EXTRITAMENTE SEMLHANTE AO FIGMA OS TAMANHOS E POSICIONAMENTOS DA TELA NA RESOLUÇÃO MÍNIMA INDICADA NÃO */
+}
+
+.hero-subtitle{
+    color: var(--subtitle);
+}
+
+.hero-title{
+    color: var(--primary-color);
+}
+
+.hero-paragraph{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.hero-button{
+    background-color: rgba(17, 17, 17, 1);
+    color: var(--primary-color);
+    padding: 16px 30px;
+    font-family: Libre Franklin;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 16px;
+}
+
+/* .hero-second-article{
+    width: 405px;
+    height: 80%;
+}
+
+.image{
+    object-fit: cover;
+
+} */
+
+/* SECTION SERVICE */
+.service-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card p {
+    width: 306px;
+}
+
+.icon-fly {
+    color: var();
+}

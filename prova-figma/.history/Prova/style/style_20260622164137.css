@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #fff
+}
+
+body {
+    font-family:"Libre Franklin";
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav {
+    display: none;
+}
+
+header button {
+    display: none;
+}
+
+header img {
+    border-radius: ;
+}
+

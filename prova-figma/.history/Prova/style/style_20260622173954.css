@@ -1,0 +1,36 @@
+
+
+body {
+    font-family:"Libre Franklin";
+    margin: 0px;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+header nav {
+    display: none;
+}
+
+header button {
+    display: none;
+}
+
+header img {
+    border: solid 1px var(--header-icon-border-color);
+    border-radius: 16px;
+}
+
+header h2 {
+    color: var(--primary-color);
+}
+
+.hero-subtitle{
+    color: var(--subtitle);
+}
+
+.hero-
