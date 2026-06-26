@@ -602,7 +602,7 @@ body{
 .contact-card-description{
     color: var(--primary-color);
     padding: 0px 0px 0px 24px;
-    width: clamp(257px, 32vw, 340px); /* WIDTH ALTERADO PARA FIAR VISUALMENTE IGUAL AO FIGMA (O FIGMA ESTÁ ERRADO) */
+    width: clamp(257px, 32vw, 340px); /* WIDTH ALTERADO PARA FIAR VISUALMENTE IGUAL AO FIGMA *
 }
 
 .contact-description{
@@ -631,9 +631,6 @@ body{
 .footer-section-1 {
     margin-top: 100px;
     justify-self: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
 

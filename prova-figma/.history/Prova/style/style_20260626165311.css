@@ -370,11 +370,6 @@ body{
     margin-bottom: 16px;
 }
 
-.card-azul{
-    background-color: rgba(50, 121, 226, 1);
-    color: rgba(255, 255, 255, 0.5);
-}
-
 .background-image-testimonials{
     background-color: var(--primary-color);
     width: 70px;
@@ -409,7 +404,6 @@ body{
 
 .testimonials-paragraph{
     padding: 26px 0px 0px 0px;
-    color: rgba(51, 51, 51, 0.75);
 }
 
 .testimonials-article{
@@ -544,8 +538,7 @@ body{
 
 .contact-form button {
     margin-top: 16px;
-    width: 170px;
-    height: 48px;
+    width: 60%;
     height: 48px;
     border-radius: 16px;
     background-color: #111;
@@ -576,7 +569,7 @@ body{
 .description-paragraph{
     color: rgba(255, 255, 255, 0.5);
     padding: 0px 0px 36px 0px;
-    width: clamp(329px, 32vw, 470px);
+    width: 329px;
 }
 
 .contact-card{
@@ -602,7 +595,7 @@ body{
 .contact-card-description{
     color: var(--primary-color);
     padding: 0px 0px 0px 24px;
-    width: clamp(257px, 32vw, 340px); /* WIDTH ALTERADO PARA FIAR VISUALMENTE IGUAL AO FIGMA (O FIGMA ESTÁ ERRADO) */
+    width: clamp(257px, 32vw, 317px);
 }
 
 .contact-description{
@@ -631,9 +624,6 @@ body{
 .footer-section-1 {
     margin-top: 100px;
     justify-self: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
 

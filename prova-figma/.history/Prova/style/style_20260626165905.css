@@ -633,8 +633,7 @@ body{
     justify-self: center;
     align-items: center;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    fl
 }
 
 .footer-section-1-contact-button {
