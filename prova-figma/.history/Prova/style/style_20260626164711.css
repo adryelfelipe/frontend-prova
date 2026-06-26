@@ -23,16 +23,16 @@ body{
     display: none;
 }
 
-#header button{
+header button{
     display: none;
 }
 
-#header img {
+header img {
     border: solid 1px var(--header-icon-border-color);
     border-radius: 16px;
 }
 
-#header h2 {
+header h2 {
     color: var(--primary-color);
 }
 
@@ -45,7 +45,7 @@ body{
     justify-content: center;
 }
 
-#hero-first-article{
+.hero-first-article{
     width: 98%;                     /*OBSERVAÇÃO IMPORTANTE EM QUESTÃO          DO POSICIONAMENTO E FIDELIDADE AO FIGMA*/
     justify-self: center;           /*O POSICIONAMENTO FOI ALTERADO POIS, EMBORA A TIPOGRAFIA TENHA SIDO COPIADA EXTRITAMENTE SEMLHANTE AO FIGMA OS TAMANHOS E POSICIONAMENTOS DA TELA NA RESOLUÇÃO MÍNIMA INDICADA NÃO DARIAM CERTO - CONVERSADO E CONCORDADO COM PROFESSOR*/
 }
@@ -103,13 +103,13 @@ body{
     align-items: center;
 }
 
-#service-container {
+.service-container {
     display: flex;
     flex-direction: column;
     gap: 64px;
 }
 
-#service-container-line {
+.service-container-line {
     height: 1px;
     background-color: var(--normal-line);
     width: 85vw;
@@ -462,7 +462,7 @@ body{
     background: linear-gradient(135deg, #3279E2 0%, #CACAEB 100%);
     border-radius: 64px;
     display: flex;
-    width: clamp(330px, 80vw, 1320px); /*HEIGHT ALTERADA PARA FICAR VISUALMENTE IGUAL AO FIGMA (O VALOR DO FIGMA NÃO FUNCIONA)*/
+    width: clamp(330px, 80vw, 1320px); /* A */
     justify-content: center;    
 }
 
@@ -518,7 +518,7 @@ body{
 
 .contact-form input {
     border-radius: 16px;
-    width: clamp(273px, 32vw, 410px);
+    width: 273px;
     border: none;
 }
 
@@ -531,7 +531,7 @@ body{
 } 
 
 .contact-form select {
-    width: clamp(273px, 32vw, 410px);
+    width: 273px;
     height: 48px;
     border-radius: 16px;
 }

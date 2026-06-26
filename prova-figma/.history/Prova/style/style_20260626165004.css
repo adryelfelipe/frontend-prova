@@ -109,7 +109,7 @@ body{
     gap: 64px;
 }
 
-#service-container-line {
+.service-container-line {
     height: 1px;
     background-color: var(--normal-line);
     width: 85vw;
@@ -531,7 +531,7 @@ body{
 } 
 
 .contact-form select {
-    width: clamp(273px, 32vw, 410px);
+    width: 273px;
     height: 48px;
     border-radius: 16px;
 }

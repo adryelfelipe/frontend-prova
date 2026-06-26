@@ -10,7 +10,7 @@ body{
 }
 
 /* HEADER */
-#header{
+header{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -19,35 +19,35 @@ body{
     height: 66px;
 }
 
-#header nav{
+header nav{
     display: none;
 }
 
-#header button{
+header button{
     display: none;
 }
 
-#header img {
+header img {
     border: solid 1px var(--header-icon-border-color);
     border-radius: 16px;
 }
 
-#header h2 {
+header h2 {
     color: var(--primary-color);
 }
 
 
 /* SECTION HERO */
-#hero{
+.hero{
     background: linear-gradient(135deg, #3279E2 0%, #CACAEB 100%);
     margin-bottom: 80px;
     display: flex;
     justify-content: center;
 }
 
-#hero-first-article{
+.hero-first-article{
     width: 98%;                     /*OBSERVAÇÃO IMPORTANTE EM QUESTÃO          DO POSICIONAMENTO E FIDELIDADE AO FIGMA*/
-    justify-self: center;           /*O POSICIONAMENTO FOI ALTERADO POIS, EMBORA A TIPOGRAFIA TENHA SIDO COPIADA EXTRITAMENTE SEMLHANTE AO FIGMA OS TAMANHOS E POSICIONAMENTOS DA TELA NA RESOLUÇÃO MÍNIMA INDICADA NÃO DARIAM CERTO - CONVERSADO E CONCORDADO COM PROFESSOR*/
+    justify-self: center;           /*O POSICIONAMENTO FOI ALTERADO POIS, EMBORA A TIPOGRAFIA TENHA SIDO COPIADA EXTRITAMENTE SEMLHANTE AO FIGMA OS TAMANHOS E POSICIONAMENTOS DA TELA NA RESOLUÇÃO MÍNIMA INDICADA NÃO DARIAM CERTO*/
 }
 
 .hero-subtitle{
@@ -86,7 +86,7 @@ body{
     margin-top: 22px;
 }
 
-#hero img {
+.hero img {
     margin-top: 54px;
     width: clamp(360px, 55vw, 698px);
     height: clamp(442px, 55vw, 762px);
@@ -97,19 +97,19 @@ body{
 }
 
 /* SECTION SERVICE */
-#service {
+.service {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#service-container {
+.service-container {
     display: flex;
     flex-direction: column;
     gap: 64px;
 }
 
-#service-container-line {
+.service-container-line {
     height: 1px;
     background-color: var(--normal-line);
     width: 85vw;
@@ -248,15 +248,16 @@ body{
 
 /* SECTION OUR COMPANY */
 
-#our-company{
+.our-company{
     background-color: rgba(236, 241, 250, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#our-company h2 {
+.our-company h2 {
     padding-bottom: 15px;
+    width: 332px;
 }
 
 .company-subtitle{
@@ -266,7 +267,8 @@ body{
 }
 
 .our-company-title {
-    width: clamp(332px, 50vw, 455px);
+    /* width: clamp(332px, 50vw, 449px); */
+    width: 1000000px;
 }
 
 .company-button{
@@ -330,7 +332,7 @@ body{
 }
 /* SECTION TESTIMONIALS */
 
-#testimonials{
+.testimonials{
     background-color: rgba(6, 38, 84, 1);
     display: flex;
     flex-direction: column;
@@ -348,7 +350,7 @@ body{
 
 .testimonials-subtitle-second{
     color: var(--primary-color);
-    width: clamp(368px, 32vw, 480px); /*WIDTH ALTERADO PARA FICAR VISUALMENTE IGUAL AO FIGMA (O VALOR DO FIGMA NÃO FUNCIONAVA) - CONVERSADO E CONCORDADO COM O PROFESSOR*/
+    width: 90%;
     text-align: center;
     justify-self: center;
     padding: 16px 0px 54px 0px;
@@ -432,7 +434,7 @@ body{
 
 .app-title{
     color: var(--primary-color);
-    width: clamp(329px, 32vw, 470px);
+    width: clamp(329px, 4vw, 470px);
 }
 
 .app-article{
@@ -455,20 +457,23 @@ body{
 .app-card-title{
     color: var(--primary-color);
     padding: 16px 0px 38px 0px;
-    width: clamp(273px, 30vw, 400px); /*WIDTH ALTERADO PARA FICAR VISUALMENTE IGUAL AO FIGMA (O VALOR DO FIGMA NÃO FUNCIONAVA) - CONVERSADO E CONCORDADO COM O PROFESSOR*/
+    width: clamp(273px, 32vw, 387px);
 }
 
 .app-card-article{
     background: linear-gradient(135deg, #3279E2 0%, #CACAEB 100%);
     border-radius: 64px;
     display: flex;
-    width: clamp(330px, 80vw, 1320px); /*HEIGHT ALTERADA PARA FICAR VISUALMENTE IGUAL AO FIGMA (O VALOR DO FIGMA NÃO FUNCIONA)*/
+    width: 330px;
     justify-content: center;    
 }
 
+.app-card-div {
+
+}
+
 .app-cell-image{
-    width: clamp(278px, 55vw, 523px);
-    height: clamp(228px, 55vw, 428px);
+    width: clamp(278px, 10vw, 523px);
 }
 
 .app-card-button{
@@ -498,7 +503,7 @@ body{
     padding: 0px 0px 16px 0px;
 }
 
-#contacts {
+.contacts {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -518,7 +523,7 @@ body{
 
 .contact-form input {
     border-radius: 16px;
-    width: clamp(273px, 32vw, 410px);
+    width: 273px;
     border: none;
 }
 
@@ -531,7 +536,7 @@ body{
 } 
 
 .contact-form select {
-    width: clamp(273px, 32vw, 410px);
+    width: 273px;
     height: 48px;
     border-radius: 16px;
 }
@@ -609,8 +614,15 @@ body{
     gap: 16px;
 }
 
+
+
+
+
+
+
+
 /* FOOTER */
-#footer {
+.footer {
     display: flex;
     flex-direction: column;
 }
@@ -650,7 +662,7 @@ body{
     margin-top: 32px;
 }
 
-#footer p,a {
+.footer p,a {
     color: rgba(51, 51, 51, 1);
 }
 
