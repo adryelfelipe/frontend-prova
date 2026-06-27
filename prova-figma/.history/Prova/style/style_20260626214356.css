@@ -730,7 +730,7 @@ body{
 .footer-section-2-service {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: start;
 }
 
 .footer-section-2-service h3{
@@ -837,14 +837,6 @@ input::placeholder {
     .footer-terms-privacy {
         width: auto;
         gap: 69px;
-    }
-
-    .footer-section-2-service {
-        text-align: start;
-    }
-
-    .footer-section-2-menu {
-        text-align: start;
     }
 }
 

@@ -840,12 +840,10 @@ input::placeholder {
     }
 
     .footer-section-2-service {
-        text-align: start;
-    }
-
-    .footer-section-2-menu {
-        text-align: start;
-    }
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
 }
 
 @media(min-width: 1200px) {

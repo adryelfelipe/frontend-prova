@@ -842,10 +842,6 @@ input::placeholder {
     .footer-section-2-service {
         text-align: start;
     }
-
-    .footer-section-2-menu {
-        text-align: start;
-    }
 }
 
 @media(min-width: 1200px) {

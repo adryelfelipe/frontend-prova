@@ -838,14 +838,6 @@ input::placeholder {
         width: auto;
         gap: 69px;
     }
-
-    .footer-section-2-service {
-        text-align: start;
-    }
-
-    .footer-section-2-menu {
-        text-align: start;
-    }
 }
 
 @media(min-width: 1200px) {

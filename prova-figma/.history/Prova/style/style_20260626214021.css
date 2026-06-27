@@ -387,7 +387,7 @@ body{
 
 .testimonials-subtitle-second{
     color: var(--primary-color);
-    width: clamp(329px, 40vw, 480px); /*WIDTH ALTERADO PARA FICAR VISUALMENTE IGUAL AO FIGMA (O VALOR DO FIGMA NÃO FUNCIONAVA) - CONVERSADO E CONCORDADO COM O PROFESSOR*/
+    width: clamp(368px, 5vw, 480px); /*WIDTH ALTERADO PARA FICAR VISUALMENTE IGUAL AO FIGMA (O VALOR DO FIGMA NÃO FUNCIONAVA) - CONVERSADO E CONCORDADO COM O PROFESSOR*/
     text-align: center;
     justify-self: center;
     padding: 16px 0px 54px 0px;
@@ -837,14 +837,6 @@ input::placeholder {
     .footer-terms-privacy {
         width: auto;
         gap: 69px;
-    }
-
-    .footer-section-2-service {
-        text-align: start;
-    }
-
-    .footer-section-2-menu {
-        text-align: start;
     }
 }
 
