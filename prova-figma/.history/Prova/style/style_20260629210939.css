@@ -1,0 +1,1068 @@
+/*
+
+AVISOS:
+
+- ALGUNS ESPAÇAMENTOS NÃO FORAM SEGUIDOS EXATAMENTE IGUAIS AO FIGMA,
+POIS NO TEMPLATE QUE RECEBEMOS HAVIAM DIVERSOS ELEMENTOS TORTOS E POR ISSO ENTRAMOS
+EM CONTATO COM O PROFESSOR E COMBINAMOS QUE UTILIZARIAMOS DISPLAYS PARA CENTRALIZAÇÃO
+
+*/
+
+
+/*
+
+PADRÕES ADOTADOS PELA EQUIPE: 
+
+- DURANTE O NOSSO DESENVOLVIMENTO ADOTAMOS O PADRÃO MOBILE-FIRST,
+DEFININDO TODA A ESTILIZAÇÃO PARA OS CELULARES E ENTÃO AJUSTANDO PARA AS DEMAIS TELAS
+
+- SEPARAMOS AS VARIÁVEIS QUE PODERIAM SER REUTILIZADAS EM UM ARQUIVO CSS A PARTE CHAMADO 'variaveis.css',
+PARA APRIMORAR A MANUTENIBILIDADE DO NOSSO CÓDIGO - FOCAMOS EM TIPOGRAFIAS, SEM FOCAR EM BOTÕES OU CORES (MAIS INFORMAÇÕES NO ARQUIVO "variaveis.css")
+
+- SEPARAMOS CADA ELEMENTO EM SEU RESPECTIVO BLOCO IDENTIFICADO PELOS COMENTÁRIOS (tanto no arquivo 'style.css' quanto no 'variaveis.css')
+
+- SEPARAMOS CADA RECURSO EM SEU LUGAR/PASTA ESPECÍFICO
+Ex.: imagens -> "assets' > "img"
+     icones -> "assets" > "icons"
+
+- ORGANIZAMOS O PROJETO POR PASTAS E ARQUIVOS DEFINIDOS POR SEU PROPÓSIT
+    -> PASTA DE RECURSOS - CONTENDO TANTO ÍCONES E IMAGENS
+    -> PASTA DE ESTILOS - CONTENDO TANTO FOLHAS DE ESTILOS GERAIS QUANTO VARIAVEIS
+    -> FOLHA PRINCIPAL DA APLICAÇÃO - ESTRUTURADO DE FORMA SEMÂNTICA
+
+- UTILIZAMOS O PADRÃO DE NOMENCLATURA kebab-case, SEPARANDO AS PALAVRAS POR MEIO DE HÍFENS.
+Ex.: "hero-button"
+- ADOTAMOS UMA CONVENÇÃO DE NOMENCLATURA BASEADA EM SEÇÕES,
+  UTILIZANDO O NOME DA SEÇÃO COMO PREFIXO PARA CLASSES E IDS RELACIONADAS,
+  FACILITANDO A IDENTIFICAÇÃO DOS ELEMENTOS E EVITANDO CONFLITOS DE NOMES.
+Ex.: "hero-button", "testimonials-card", "contact-form"
+- ELEMENTOS GENÉRICOS E REUTILIZÁVEIS, COMO TÍTULOS, SUBTÍTULOS E PARÁGRAFOS,
+  UTILIZAM CLASSES COMPARTILHADAS E NÃO SEGUEM A NOMENCLATURA DA SEÇÃO.
+Ex.: "title-base", "subtitle-base", "paragraph"
+
+- AO DECORRER DO PROJETO OBSERVAMOS A NECESSIDADE DE CATEGORIZAR POR IDs E CLASSES
+    IDs (#) -> TODOS OS COMPONENTES/CONTAINERS QUE NUNCA SE REPETEM
+    Ex: #header // #hero
+    
+    CLASSES (.) -> TODOS OS COMPONENTES/CONTAINERS/ESCRITAS QUE SE REPETEM UMA OU MAIS VEZES
+    Ex: .subtitle-base // .service-card
+*/
+
+/* ESTILIZAÇÃO GERAL */
+/* Estilização geral: elementos */
+*{
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização geral: links e botões */
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    display: block;
+}
+
+/* Estilização geral: formulários e campos */
+input, select{
+    display: block;
+}
+
+input::placeholder {
+    padding-left: 15px;
+}
+
+/* Estilização geral: Body */
+body{
+    font-family:"Libre Franklin";
+    margin: 0px;
+}
+
+/* HEADER */
+/* O ALINHAMENTO FOI FEITO COM SPACE-AROUND POIS CONVERSAMOS COM O PROFESSOR E DETERMINAMOS QUE ESSA ERA A MELHOR MANEIRA.*/
+#header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--background-gradient);
+    bottom: 26px;
+    height: 66px;
+}
+
+/* Header: estilização de wrappers e botões */
+#header nav{
+    display: none;
+}
+
+#header button{
+    display: none;
+    width: 8.6rem;
+    height: 3rem;
+    border-radius: 16px;
+    background-color: transparent;
+    border: 1px solid var(--header-icon-border-color);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+/* Header: estilização dos textos e imagens */
+#header p {
+    color: var(--primary-color); 
+}
+
+#header img {
+    border: solid 1px var(--header-icon-border-color);
+    border-radius: 16px;
+}
+
+#header h2 {
+    color: var(--primary-color);
+    font-size: 40px;font-family: Libre Franklin;
+    font-weight: 900;
+    font-size: 2.5rem;
+    line-height: 48px;
+    letter-spacing: 0px;
+}
+
+/* SECTION HERO */
+/* Hero: estilização de wrappers e botões */
+#hero{
+    background: var(--background-gradient);
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+#hero-first-article{
+    width: 98%;                     /*OBSERVAÇÃO IMPORTANTE EM QUESTÃO          DO POSICIONAMENTO E FIDELIDADE AO FIGMA*/
+    justify-self: center;           /*O POSICIONAMENTO FOI ALTERADO POIS, EMBORA A TIPOGRAFIA TENHA SIDO COPIADA EXTRITAMENTE SEMLHANTE AO FIGMA OS TAMANHOS E POSICIONAMENTOS DA TELA NA RESOLUÇÃO MÍNIMA INDICADA NÃO DARIAM CERTO - CONVERSADO E CONCORDADO COM PROFESSOR*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-button{
+    background-color: var(--bg-button-primary);
+    color: var(--primary-color);
+    padding: 16px 30px;
+    width: 10rem;
+    font-family: 'Libre Franklin';
+    font-weight: 700;
+    font-size: 0.8rem;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 16px;
+    margin-top: 22px;
+}
+
+/* Hero: estilização de textos e imagens */
+.hero-subtitle{
+    padding-top: 26px;
+    padding-bottom: 18px;
+    color: var(--color-subtitle);
+}
+
+.hero-title{
+    color: var(--primary-color);
+    padding-bottom: 13px;
+}
+
+.hero-paragraph{
+    color: var(--color-paragraph-primary);
+    width: clamp(329px, 32vw, 470px);
+}
+
+#hero img {
+    margin-top: 54px;
+    width: clamp(360px, 50vw, 698px);
+    height: clamp(442px, 55vw, 762px);
+}
+
+/* SECTION SERVICE */
+/* Service: estilização de wrappers e botões */
+#service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+}
+
+#service-container {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.service-subcard {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+#service-container-line {
+    height: 1px;
+    background-color: var(--normal-line);
+    width: 85vw;
+    justify-self: center;
+    margin-top: 80px;
+    margin-bottom: 95px;
+}
+
+.service-align-div {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.service-final-article button {
+    font-size: 0.8rem;
+    color: var(--bg-icon-correct);
+    font-weight: 700;
+    background-color: transparent;
+    border: 1px solid var(--button-blue-border);
+    border-radius: 16px;
+    width: 12.6rem;
+    height: 3rem;
+    margin-top: 39px;
+    margin-bottom: 112px;
+}
+
+/* Service: estilização de textos, imagens e icones*/
+.service-card-paragraph{
+    width: 306px;
+}
+
+.service-img {
+    justify-self: center;
+    width: clamp(329px, 55vw, 570px);
+    height: clamp(329px, 55vw, 570px);
+    margin-bottom: 49px;
+}
+
+
+.service-card p {
+    width: 306px;
+}
+
+.service-bg-icon-fly {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    width: 6rem;
+    height: 6rem;
+    background-color: var(--bg-icon-fly)
+}
+
+.service-icon-fly {
+    height: 2rem;
+    width: 3rem;
+}
+
+.service-bg-icon-backpack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    width: 6rem;
+    height: 6rem;
+    background-color: var(--bg-icon-backpack)
+}
+
+.service-icon-backpack {
+    height: 2,5rem;
+    width: 3rem;
+}
+
+.service-h3-space {
+    margin-bottom: 16px;
+}
+
+.service-h2-space {
+    margin-bottom: 31px;
+    width: clamp(192px, 32vw, 264px);
+}
+
+.service-bg-icon {
+    margin-bottom: 33px;
+}
+
+.service-bg-icon-rocket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    width: 6rem;
+    height: 6rem;
+    background-color: var(--bg-icon-rocket)
+}
+
+.service-icon-rocket {
+    height: 3rem;
+    width: 3rem;
+}
+
+.service-bg-icon-correct {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--bg-icon-correct)
+}
+
+.service-icon-correct {
+    width: 1rem;
+    height: 0,8rem;
+    color: var(--icon-correct-color);
+}
+
+.service-final-article h3 {
+    color: var(--bg-color);
+}
+
+.service-final-article h2 {
+    width: 195px;
+    height: 95px;
+}
+
+.service-final-article-p {
+    width: clamp(281px, 32vw, 419px);
+}
+
+/* SECTION OUR COMPANY */
+/* Our-Company: estilização de wrappers e botões */
+#our-company{
+    background-color: var(--bg-terciary);
+    display: flex;
+    justify-content: center;
+}
+
+.our-company-div{
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.company-button{
+    background-color: transparent;
+    color: var(--bg-color);
+    padding: 16px 30px;
+    font-family: Libre Franklin;
+    font-weight: 700;
+    font-size: 0.8rem;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid var(--button-blue-border);
+    border-radius: 16px;
+    margin-top: 32px;
+}
+
+.companies-app {
+    margin-top: 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.companies-app-container-1 {
+    display: flex;
+    gap: 37px;
+}
+
+.companies-app-container-2 {
+    display: flex;
+    gap: 64px;
+}
+
+/* Our-Company: estilização de textos e imagens */
+#our-company h2 {
+    padding-bottom: 15px;
+}
+
+.company-subtitle{
+    color: var(--bg-color);
+    padding-top: 90px;
+    padding-bottom: 16px;
+}
+
+.our-company-title {
+    width: clamp(332px, 50vw, 455px);
+}
+
+.company-paragraph {
+    width: clamp(329px, 32vw, 470px);
+}
+
+.company-paragraph-second{
+    color: var(--color-paragraph-secondary);
+    width: clamp(329px, 32vw, 470px);
+    padding-top: 14px;
+}
+
+.company-first-article{
+    width: auto;
+}
+
+.company-second-article{
+    justify-self: center;
+}
+
+.company-image {
+    margin-top: 80px;
+    margin-bottom: 103px;
+    width: clamp(329px, 55vw, 570px);
+    height: clamp(329px, 55vw, 570px);
+}
+
+/* SECTION TESTIMONIALS */
+/* Testimonials: estilização de wrappers e botões */
+#testimonials{
+    background-color: rgba(6, 38, 84, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 176px;
+    display: flex;
+    justify-content: center;
+}
+
+.testimonials-background-image{
+    background-color: var(--primary-color);
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    padding: 0px 0px 16px 0px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 4px 8px 0px rgba(6, 38, 84, 0.12);
+}
+
+.testimonials-company{
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    align-items: center;
+}
+
+.testimonials-article{
+    justify-self: center;
+}
+
+.testimonials-app-article{
+    margin-top: 64px;
+    margin-bottom: 62px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonials-app-article button{
+    margin-bottom: 95px;
+}
+
+.testimonials-card{
+    background-color: var(--primary-color);
+    border-radius: 24px;
+    height: 448px;
+    width: 355px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.testimonials-card-azul{
+    background-color: var(--bg-color);
+    color: var(--color-paragraph-primary);
+}
+
+.testimonials-button{
+    width: 10.6rem;
+    height: 3rem;
+    background-color: transparent;
+    border: 1px solid var(--color-paragraph-primary);
+    border-radius: 16px;
+    font-family: Libre Franklin;
+    font-weight: 700;
+    font-size: 0.8rem;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+.testimonials-line{
+    background-color: rgba(37, 66, 108, 1);
+    height: 2px;
+    border: none;
+    margin-top: 25px;
+}
+
+.testimonials-align-div {
+    justify-items: center;
+}
+
+.testimonials-app-card-button{
+    font-family: Libre Franklin;
+    font-weight: 700;
+    font-size: 0.8rem;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: var(--bg-button-primary);
+    color: var(--primary-color);
+    width: 8.6rem;
+    height: 3rem;
+    border-radius: 16px;
+    border: none;
+}
+
+.testimonials-app-card-article{
+    background: var(--background-gradient);
+    border-radius: 64px;
+    display: flex;
+    width: clamp(330px, 80vw, 1320px); /*HEIGHT ALTERADA PARA FICAR VISUALMENTE IGUAL AO FIGMA (O VALOR DO FIGMA NÃO FUNCIONA)*/
+    align-items: center;    
+    flex-direction: column;
+}
+
+.testimonials-centralizer{
+    width: 80%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    /*COLOCAMOS O SPACE AROUND PARA QUE INDEPENDENTE DO NÚMERO DE LINHAS NA DESCRIÇÃO TUDO FIQUE MINIMAMENTE ALINHADO*/
+}
+
+/* Testimonials: estilização de textos e imagens */
+.testimonials-subtitle{
+    margin-top: 34px;
+    color: var(--color-subtitle);
+    justify-self: center;
+}
+
+.testimonials-subtitle-second{
+    color: var(--primary-color);
+    width: clamp(329px, 40vw, 480px); /*WIDTH ALTERADO PARA FICAR VISUALMENTE IGUAL AO FIGMA (O VALOR DO FIGMA NÃO FUNCIONAVA) - CONVERSADO E CONCORDADO COM O PROFESSOR*/
+    text-align: center;
+    justify-self: center;
+    padding: 16px 0px 54px 0px;
+}
+
+.testimonials-image-user{
+    width: 62px;        /*TAMANHOS NÃO CONDIZEM COM FIGMA POIS NÃO HÁ A POSSIBILIDADE DE FICAR IDENTICO VISUALMENTE E EM CÓDIGO*/
+    height: 66px;       /*TAMANHOS NÃO CONDIZEM COM FIGMA POIS NÃO HÁ A POSSIBILIDADE DE FICAR IDENTICO VISUALMENTE E EM CÓDIGO*/
+    margin: 0px;
+    padding: 4px 0px 0px 0px;
+}
+
+.testimonials-company-description{
+    font-family: 'Libre Franklin';
+    font-weight: 300;
+    font-size: 0.8rem;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: var(--color-paragraph-secondary);
+}
+
+.testimonials-paragraph{
+    color: var(--color-paragraph-secondary);
+}
+
+.testimonials-card-azul h3{
+    color: var(--primary-color);
+}
+
+.testimonials-card-azul p{
+    color: var(--color-paragraph-primary);
+}
+
+.testimonials-stars{
+    width: 152px;
+    height: 24px;
+}
+
+.testimonials-app-title{
+    color: var(--primary-color);
+    width: clamp(329px, 32vw, 470px);
+}
+
+.testimonials-app-card-subtitle{
+    color: var(--color-subtitle);
+    padding: 74px 0px 0px 0px;
+}
+
+.testimonials-app-card-title{
+    color: var(--primary-color);
+    padding: 16px 0px 38px 0px;
+    width: clamp(273px, 30vw, 400px); /*WIDTH ALTERADO PARA FICAR VISUALMENTE IGUAL AO FIGMA (O VALOR DO FIGMA NÃO FUNCIONAVA) - CONVERSADO E CONCORDADO COM O PROFESSOR*/
+}
+
+.testimonials-app-cell-image{
+    width: clamp(278px, 55vw, 523px);
+    height: clamp(228px, 55vw, 428px);
+}
+
+/* SECTION CONTACTS */
+/* Contacts: estilização de wrappers e botões */
+.contact-form button {
+    margin-top: 16px;
+    width: 10.6rem;
+    height: 3rem;
+    border-radius: 16px;
+    background-color: #111;
+    border: none;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-bottom: 64px;
+}
+
+#contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(6, 38, 84, 1);
+}
+
+.contact-align-button {
+    display: flex;
+    justify-content: end;
+}
+
+.contact-card{
+    display: flex;
+    align-self: center;
+    padding: 0px 0px 32px 0px;
+}
+
+.contact-card:last-child{
+    padding: 0px 0px 114px 0px;
+}
+
+.contact-get-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Contacts: estilização de formulários e campos */
+.contact-form {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    width: clamp(329px, 55vw, 570px);
+    border-radius: 24px;
+    margin-bottom: 106px;
+}
+
+.contact-form input {
+    border-radius: 16px;
+    width: clamp(273px, 40vw, 410px);
+    border: none;
+}
+
+.contact-normal-input {
+    height: 48px;
+}
+
+.contact-big-input {
+    height: 144px;
+} 
+
+.contact-form select {
+    width: clamp(273px, 40vw, 410px);
+    height: 48px;
+    border-radius: 16px;
+}
+
+/* Contacts: estilização de textos e imagens*/
+.contact-description-subtitle {
+    color: var(--color-subtitle);
+    padding: 0px 0px 16px 0px;
+}
+
+.contact-description-title{
+    color: var(--primary-color);
+    padding: 0px 0px 16px 0px;
+}
+
+.contact-form-title{
+    color: var(--primary-color);
+    padding: 72px 0px 24px 0px;
+}
+
+
+.contact-description-paragraph{
+    color: var(--color-paragraph-primary);
+    padding: 0px 0px 36px 0px;
+    width: clamp(329px, 32vw, 470px);
+}
+
+.contact-logos{
+    width: 16px;
+    height: 24px;
+}
+
+.contact-logo{
+    width: 24px;
+    height: 18px;
+}
+
+.contact-card-description{
+    color: var(--primary-color);
+    padding: 0px 0px 0px 24px;
+    width: clamp(257px, 32vw, 340px); /* WIDTH ALTERADO PARA FIAR VISUALMENTE IGUAL AO FIGMA (O FIGMA ESTÁ ERRADO) */
+}
+
+/* FOOTER */
+/* Footer: estilização de wrappers e botões */
+#footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-section-1 {
+    margin-top: 100px;
+    justify-self: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-section-1-contact-button {
+    width: clamp(144px, 11vw, 154px);
+    height: 3rem;
+    border: 1px solid var(--button-blue-border);
+    border-radius: 16px;
+    color: var(--bg-color);
+    font-weight: 700;    
+    background-color: transparent;
+}
+
+.footer-section-1-started-button {
+    width: clamp(158px, 11vw, 170px);
+    height: 48px;
+    border: none;
+    border-radius: 16px;
+    background-color: var(--bg-color);
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.footer-section-1-div {
+    display: flex;
+    gap:27px;
+    margin-top: 32px;
+}
+
+.footer-section-2 {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+}
+
+.footer-section-2-menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.footer-section-2-service {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-section-3 {
+    margin-bottom: 53px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 38px;
+}
+
+.footer-container-line {
+    height: 1px;
+    background-color: var(--normal-line);
+    width: 85vw;
+    justify-self: center;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    align-self: center;
+}
+
+.footer-terms-privacy {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 32px;
+    margin-bottom: 53px;
+    width: 100%;
+    gap: 69px;
+}
+
+/* Footer: estilização de textos e imagens */
+.footer-title {
+    justify-self: center;
+    margin-bottom: 48px;
+}
+
+#footer p,a {
+    color: rgba(51, 51, 51, 1);
+}
+
+.footer-section-2-menu h3{
+    color: var(--bg-color);
+}
+
+.footer-section-2-service h3{
+    color: var(--bg-color);
+}
+
+.footer-copyright {
+    color: var(--color-paragraph-secondary);
+    width: clamp(192px, 32vw, 340px);
+    text-align: center;
+    justify-self: center;
+}
+
+.footer-icon-facebook {
+    width: 9.3px;
+    height: 16px;
+}
+
+.footer-icon-twiiter {
+    width: 16px;
+    height: 13px;
+}
+
+.footer-icon-instagram {
+    width: 16px;
+    height: 16px;
+}
+
+.footer-subtitle{
+    width: clamp(329px, 80vw, 570px);
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+/* MEDIA QUERIES - TABLET */
+@media(min-width: 920px) {
+    /* FOOTER */
+    /* Footer: wrappers */
+    .footer-section-1 {
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    .footer-section-2 {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .footer-section-3 {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    /* Footer: textos e imagens */
+    .footer-terms-privacy {
+        width: auto;
+        gap: 69px;
+    }
+
+    .footer-section-2-service {
+        text-align: start;
+    }
+
+    .footer-section-2-menu {
+        text-align: start ;
+        margin-bottom: 0px;
+    }
+
+    .footer-icons {
+        margin: 0px
+    }
+}
+
+/* MEDIA QUERIES - DESKTOP - 1*/
+@media(min-width: 1200px) {
+    /* SECTION SERVICE */
+    /* Service: wrappers*/
+    #service-container {
+        flex-direction: row;
+        gap: 94px;
+    }
+
+    .service-div-align {
+        display: flex;
+        gap: 130px;
+    }
+}
+
+/* MEDIA QUERIES - DESKTOP - 2*/
+@media(min-width: 1300px) {
+    /* HEADER */
+    /* Header: wrappers e botões*/
+    #header nav{
+        display: flex;
+        gap: 80px;
+    }
+
+    #header button {
+        display: flex;
+    } 
+
+    .our-company-div{
+        gap: 130px;
+        flex-direction: row;
+        justify-self: space-around;
+    }
+
+    .testimonials-article {
+        display: flex;
+        gap: 30px;
+    }
+
+    .testimonials-app-div{
+        display: flex;
+        gap: 42px;
+    }
+
+    .testimonials-app-card-article {
+        margin-top: 167px;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 352px;
+    }
+
+    .companies-app {
+        gap: 60px;
+        flex-direction: row;
+        margin: 0;
+    }
+
+    .companies-app-container-1 {
+        gap: 60px;
+    }
+
+    .companies-app-container-2 {
+        gap: 60px;
+    }
+
+    #contacts {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    /* Header: textos e imagens */
+    #header img {
+        display: none;
+    }
+
+    .testimonials-app-card-article img {
+        margin-bottom: 75px;
+    }
+
+}
+
+/* MEDIA QUERIES - DESKTOP - 3*/
+@media(min-width: 1500px) {
+    /* SECTION HERO */
+    /* Hero: wrappers*/
+    .hero-div {
+        display: flex;
+        gap: 113px;
+    }
+}
+
+/*HOVER*/
+.link:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.hero-button:hover{
+    background-color: transparent;
+    border: 1px solid var(--color-subtitle);
+    transition: 0.5s;
+}
+
+#header button:hover{
+    background-color: var(--bg-color);
+    transition: 0.5s;
+}
+
+.service-final-article button:hover {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    transition: 0.5s;
+}
+
+.company-button:hover{
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    transition: 0.5s;
+}
+
+.testimonials-button:hover{
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    transition: 0.5s;
+    border: 1px solid var(--bg-color);
+}
+
+.footer-section-1-contact-button:hover{
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    transition: 0.5s;
+    border: 1px solid var(--bg-color);
+}
+
+.footer-section-1-started-button:hover{
+    background-color: transparent;
+    color: var(--primary-color);
+    transition: 0.5s;
+    border: 1px solid var(--bg-color);
+}
+
+.testimonials-app-card-button:hover{
+    background-color: transparent;
+    transition: 0.5s;
+    border: 1px solid ;
+}

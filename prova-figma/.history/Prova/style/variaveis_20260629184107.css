@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #FFFFFF;
+    --header-icon-border-color: rgba(255, 255, 255, 0.3);
+    --bg-color: rgba(50, 121, 226, 1);
+
+    --subtitle: rgba(170, 196, 234, 1);
+
+    --normal-line: rgba(213, 214, 225, 1);
+
+    --service-h3-color: rgba(50, 121, 226, 1);
+
+    --button-blue-border: rgba(50, 121, 226, 0.3);
+
+    --backgroung-gradient: linear-gradient(
+    to right,
+    rgba(50, 121, 226, 1) 0%,
+    rgba(202, 202, 235, 1) 100%
+    );
+
+    --bg-button-primary: rgba(17, 17, 17, 1);
+
+    
+
+    /*Icons Session 2*/
+    --bg-icon-fly: rgba(230, 247, 248, 1);
+    --bg-icon-backpack: rgba(252, 237, 240, 1);
+    --bg-icon-rocket: rgba(253, 243, 230, 1);
+    --bg-icon-correct: rgba(50, 121, 226, 1);
+
+    --icon-fly-color: rgba(73, 175, 186, 1);
+    --icon-backpack-color: rgba(237, 73, 107, 1);
+    --icon-rocket-color: rgba(241, 134, 59, 1);
+    --icon-correct-color: rgba(255, 255, 255, 1)
+}
+
+.title-base{
+    font-family: 'Libre Franklin';
+    font-weight: 900;
+    font-size: clamp(3.5rem, 10vw, 4.5rem);
+    line-height: 64px;
+    letter-spacing: -1px;
+    width: clamp(354px, 50vw, 455px);
+}
+
+.subtitle-base{
+    margin: 0;
+    font-family: 'Libre Franklin';
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 32px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.subtitle-secondary{
+    font-family: 'Libre Franklin';
+    font-weight: 900;
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
+    line-height: 48px;
+    letter-spacing: 0px;
+}
+
+.subtitle-tertiary{
+    font-family: Libre Franklin;
+    font-weight: 900;
+    font-size: 1.5rem;
+    line-height: 32px;
+    letter-spacing: 0px;
+}
+
+.paragraph{
+    font-family: 'Libre Franklin';
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 32px;
+    letter-spacing: 0px;
+}
+
+.paragraph-base{
+    font-family: Libre Franklin;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0px;
+}
+
