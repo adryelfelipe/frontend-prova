@@ -45,7 +45,7 @@ Ex.: "hero-button"
   FACILITANDO A IDENTIFICAÇÃO DOS ELEMENTOS E EVITANDO CONFLITOS DE NOMES.
 Ex.: "hero-button", "testimonials-card", "contact-form"
 
-- SELETORES GENÉRICOS E REUTILIZÁVEIS, COMO TÍTULOS, SUBTÍTULOS E PARÁGRAFOS,
+- ELEMENTOS GENÉRICOS E REUTILIZÁVEIS, COMO TÍTULOS, SUBTÍTULOS E PARÁGRAFOS,
   UTILIZAM CLASSES COMPARTILHADAS E NÃO SEGUEM A NOMENCLATURA DA SEÇÃO.
 Ex.: "title-base", "subtitle-base", "paragraph"
 
@@ -54,11 +54,7 @@ Ex.: "title-base", "subtitle-base", "paragraph"
     Ex: #header // #hero
     
     CLASSES (.) -> TODOS OS COMPONENTES/CONTAINERS/ESCRITAS QUE SE REPETEM UMA OU MAIS VEZES
-    Ex: .subtitle-base // .service-card 
-    
-- POR MAIS QUE NÃO FOI COBRADO - ASSIM COMO VARIAVEIS E ROOT, OPTAMOS POR CRIAR UM PADARÃO DE HOVER
-    -> PARA BOTÕES ORIGINALMENTE CLAROS: FOI ALTERADO PARA QUE TIVESSEM FUNDO ESCURO PORÉM MANTENDO REGRAS DE ACESSIBILIDADE E UM CONTRASTE COM A ESCRITA DO BOTÃO
-    -> PARA BOTÕES ORIGINAMENTE ESCUROS: EM SUA MAIORIA FOI ALTERADO PARA QUE TIVESSEM FUNDO TRANSPARENTE, TAMBÉM MANTENDO REGRAS DE ACESSIBILIDADE E UM CONTRASTE COM A ESCRITA DO BOTÃO.
+    Ex: .subtitle-base // .service-card    
 */
 
 /* ESTILIZAÇÃO GERAL */
@@ -732,6 +728,7 @@ body{
     padding: 72px 0px 24px 0px;
 }
 
+
 .contact-description-paragraph{
     color: var(--color-paragraph-primary);
     padding: 0px 0px 36px 0px;
@@ -897,7 +894,7 @@ body{
 /* MEDIA QUERIES - TABLET */
 @media(min-width: 920px) {
     /* FOOTER */
-    /* Footer: wrappers e hover*/
+    /* Footer: wrappers */
     .footer-section-1 {
         justify-content: space-around;
         flex-direction: row;
@@ -911,11 +908,6 @@ body{
     .footer-section-3 {
         flex-direction: row;
         justify-content: space-around;
-    }
-
-    .testimonials-card:hover {
-        transform: scale(1.01);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     }
 
     /* Footer: textos e imagens */
@@ -1030,19 +1022,41 @@ body{
 }
 
 /*HOVER*/
-/* Header e Footer: links */
 .link:hover{
     text-decoration: underline;
     cursor: pointer;
 }
 
-/* Header: botões */
+.hero-button:hover{
+    background-color: transparent;
+    border: 1px solid var(--color-subtitle);
+    transition: 0.5s;
+}
+
 #header button:hover{
     background-color: var(--bg-color);
     transition: 0.5s;
 }
 
-/* Footer: botões */
+.service-final-article button:hover {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    transition: 0.5s;
+}
+
+.company-button:hover{
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    transition: 0.5s;
+}
+
+.testimonials-button:hover{
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    transition: 0.5s;
+    border: 1px solid var(--bg-color);
+}
+
 .footer-section-1-contact-button:hover{
     background-color: var(--bg-color);
     color: var(--primary-color);
@@ -1057,44 +1071,19 @@ body{
     border: 1px solid var(--bg-color);
 }
 
-/* Hero: botões */
-.hero-button:hover{
-    background-color: transparent;
-    border: 1px solid var(--color-subtitle);
-    transition: 0.5s;
-}
-
-/* Testimonials: botões*/
-.testimonials-button:hover{
-    background-color: var(--bg-color);
-    color: var(--primary-color);
-    transition: 0.5s;
-    border: 1px solid var(--bg-color);
-}
-
 .testimonials-app-card-button:hover{
     background-color: transparent;
     transition: 0.5s;
     border: 1px solid var(--color-subtitle);
 }
 
-/* Service: botões*/
-.service-final-article button:hover {
-    background-color: var(--bg-color);
-    color: var(--primary-color);
-    transition: 0.5s;
-}
-
-/* Our-Company: botões */
-.company-button:hover{
-    background-color: var(--bg-color);
-    color: var(--primary-color);
-    transition: 0.5s;
-}
-
-/* Contact: botões */
 .contact-align-button button:hover{
     background-color: transparent;
     transition: 0.5s;
     border: 1px solid var(--color-subtitle);
+}
+
+.testimonials-card:hover{
+    transform: scale(1.01);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }

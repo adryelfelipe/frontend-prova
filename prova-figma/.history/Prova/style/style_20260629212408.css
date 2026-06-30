@@ -45,7 +45,7 @@ Ex.: "hero-button"
   FACILITANDO A IDENTIFICAÇÃO DOS ELEMENTOS E EVITANDO CONFLITOS DE NOMES.
 Ex.: "hero-button", "testimonials-card", "contact-form"
 
-- SELETORES GENÉRICOS E REUTILIZÁVEIS, COMO TÍTULOS, SUBTÍTULOS E PARÁGRAFOS,
+- ELEMENTOS GENÉRICOS E REUTILIZÁVEIS, COMO TÍTULOS, SUBTÍTULOS E PARÁGRAFOS,
   UTILIZAM CLASSES COMPARTILHADAS E NÃO SEGUEM A NOMENCLATURA DA SEÇÃO.
 Ex.: "title-base", "subtitle-base", "paragraph"
 
@@ -57,8 +57,6 @@ Ex.: "title-base", "subtitle-base", "paragraph"
     Ex: .subtitle-base // .service-card 
     
 - POR MAIS QUE NÃO FOI COBRADO - ASSIM COMO VARIAVEIS E ROOT, OPTAMOS POR CRIAR UM PADARÃO DE HOVER
-    -> PARA BOTÕES ORIGINALMENTE CLAROS: FOI ALTERADO PARA QUE TIVESSEM FUNDO ESCURO PORÉM MANTENDO REGRAS DE ACESSIBILIDADE E UM CONTRASTE COM A ESCRITA DO BOTÃO
-    -> PARA BOTÕES ORIGINAMENTE ESCUROS: EM SUA MAIORIA FOI ALTERADO PARA QUE TIVESSEM FUNDO TRANSPARENTE, TAMBÉM MANTENDO REGRAS DE ACESSIBILIDADE E UM CONTRASTE COM A ESCRITA DO BOTÃO.
 */
 
 /* ESTILIZAÇÃO GERAL */
@@ -732,6 +730,7 @@ body{
     padding: 72px 0px 24px 0px;
 }
 
+
 .contact-description-paragraph{
     color: var(--color-paragraph-primary);
     padding: 0px 0px 36px 0px;
@@ -1030,19 +1029,43 @@ body{
 }
 
 /*HOVER*/
-/* Header e Footer: links */
+
+/*Header e Footer: links*/
 .link:hover{
     text-decoration: underline;
     cursor: pointer;
 }
 
-/* Header: botões */
+.hero-button:hover{
+    background-color: transparent;
+    border: 1px solid var(--color-subtitle);
+    transition: 0.5s;
+}
+
 #header button:hover{
     background-color: var(--bg-color);
     transition: 0.5s;
 }
 
-/* Footer: botões */
+.service-final-article button:hover {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    transition: 0.5s;
+}
+
+.company-button:hover{
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    transition: 0.5s;
+}
+
+.testimonials-button:hover{
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    transition: 0.5s;
+    border: 1px solid var(--bg-color);
+}
+
 .footer-section-1-contact-button:hover{
     background-color: var(--bg-color);
     color: var(--primary-color);
@@ -1057,42 +1080,12 @@ body{
     border: 1px solid var(--bg-color);
 }
 
-/* Hero: botões */
-.hero-button:hover{
-    background-color: transparent;
-    border: 1px solid var(--color-subtitle);
-    transition: 0.5s;
-}
-
-/* Testimonials: botões*/
-.testimonials-button:hover{
-    background-color: var(--bg-color);
-    color: var(--primary-color);
-    transition: 0.5s;
-    border: 1px solid var(--bg-color);
-}
-
 .testimonials-app-card-button:hover{
     background-color: transparent;
     transition: 0.5s;
     border: 1px solid var(--color-subtitle);
 }
 
-/* Service: botões*/
-.service-final-article button:hover {
-    background-color: var(--bg-color);
-    color: var(--primary-color);
-    transition: 0.5s;
-}
-
-/* Our-Company: botões */
-.company-button:hover{
-    background-color: var(--bg-color);
-    color: var(--primary-color);
-    transition: 0.5s;
-}
-
-/* Contact: botões */
 .contact-align-button button:hover{
     background-color: transparent;
     transition: 0.5s;
